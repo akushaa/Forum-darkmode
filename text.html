@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Estilos CSS para o modal */
+    .modal {
+      display: none; /* Oculta o modal por padrão */
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5); /* Fundo escuro com transparência */
+    }
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    /* Estilos CSS para o formulário dentro do modal */
+    .modal-form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .modal-input {
+      margin-bottom: 10px;
+    }
+    
+    .modal-submit {
+      align-self: flex-end;
+      padding: 10px 20px;
+      background-color: #1D77FF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Exemplo de Modal com Inputs</h2>
+
+<!-- Botão para abrir o modal -->
+<button class="github-button" onclick="openModal()">Abrir Modal</button>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Preencha os campos abaixo:</h2>
+    
+    <!-- Formulário -->
+    <form class="modal-form">
+      <input class="modal-input" type="text" placeholder="Nome" id="input-nome">
+      <input class="modal-input" type="text" placeholder="Telefone" id="input-telefone">
+      <input class="modal-submit" type="submit" value="Enviar" onclick="submitForm()">
+    </form>
+  </div>
+</div>
+
+<script>
+  // Função para abrir o modal
+  function openModal() {
+    document.getElementById("modal").style.display = "block";
+  }
+
+  // Função para fechar o modal
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+
+  // Função para submeter o formulário
+  function submitForm() {
+    // Obter os valores dos campos de input
+    var nome = document.getElementById("input-nome").value;
+    var telefone = document.getElementById("input-telefone").value;
+    
+    // Exemplo: Exibir os valores no console
+    console.log("Nome: " + nome);
+    console.log("Telefone: " + telefone);
+    
+    // Aqui você pode adicionar sua lógica de envio do formulário
+  }
+</script>
+
+</body>
+</html>
