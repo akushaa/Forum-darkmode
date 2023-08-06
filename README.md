@@ -7,5 +7,5 @@ Projeto de um forum responsivo e private.
 - [ ] Back-end
 
 <h4 align="left"> 
-	🚧  BACK-END  🚀 Em construção...  🚧
+	🚧  BACK-END  🚀 Em construção ainda...  🚧
 </h4>
