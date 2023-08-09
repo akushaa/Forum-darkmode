@@ -1,4 +1,4 @@
-# Forum-darkmode v1.0
+# Forum-darkmode v1.0.0
 Projeto de um forum responsivo e private.
 ### Features
 
